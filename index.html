@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+        <h1 class="text-warning">Verifique o ano</h1>
+        <input/>    <button type="button" class="btn btn-outline-warning">Verificar</button>
+        <p><img src="https://media.tenor.com/2roX3uxz_68AAAAM/cat-space.gif"></p>
+    </div>
+    
+</body>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script>
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+
+    function verificaBissexto() {
+        if(input.value % 4 == 0 & (input.value % 100 != 0 | input.value % 400 == 0)) { 
+            alert(input.value + " é um ano bissexto");
+        } 
+        else {
+            alert(input.value + " não é um ano bissexto");
+        }
+    }
+
+    button.onclick = verificaBissexto;
+</script>
+</html>
